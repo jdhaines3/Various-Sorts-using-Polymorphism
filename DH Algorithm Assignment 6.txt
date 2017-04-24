@@ -1,0 +1,79 @@
+ALGORITHM FOR ASSIGNMENT 6
+
+David Haines
+
+GOAL:  To create a program that takes a csv list of numbers from a text file and loads it into an array.  The
+program then allows the user to select whether they want to sort those integers by using bubble sort or insertion sort
+methods.  Once the sorting method is complete, the program will go back to the main menu and allow the user to 
+either exit, or reload the file to try a different (or the same) sorting method.
+
+LANGUAGE: C++
+
+CLASSES: 
+-Driver
+-Sort
+	-Insertion Sort
+	-Bubble Sort
+	
+	SORT CLASS:
+		-needs a public sortArray function
+			-function must be pure virtual, so it must be called as virtual void sortArray() = 0;
+				-is pure virtual because we never intend to create an instance/object of the base SORT class
+		
+	BUBBLE SORT CLASS:
+		-will use sortArray function and override it
+		-must have two for loops:
+			-first for loop will go through each element in an array until it reaches the end; i=0
+				-the nested for loop will compare the first and second elements in the array
+				-if the first element is greater than the next, they swap positions, else the nested loop exits
+				-if the two elements needed to be swapped, the nested for loop will move on to the next two elements,
+					(ex: from first and second to second and third)
+					-the two elements will be compared and possibly swapped again
+					-this will continue until the numbers can't be swapped anymore
+				-then the first for loop will move to the next spot
+				
+		-Summary: the sort function will see if a number is greater than the next; if it is, it will swap the two,
+		then check to see if that number is greater than the next slot, until it can't be swapped.  The iterator
+		for loop will increment by one and run the swap check again and make necessary swaps. Needs iterator for loop
+		with a swap for loop nested inside.
+	
+	INSERTION SORT CLASS:
+		-will override sortArray function
+		-this sort has an iterator loop with a nested for loop similar to bubble sort.  But the difference is,
+		the iterator starts at position 1 and the nested loop starts at the iterator's position.
+			-the Nested loop has two arguments, that the index must be greater than 0, and that the number at the index is less than
+			the number before it. 
+				-if both arguments met, the for loop performs the swap, and the index variable is decremented
+				-it then checks to see if the swapped variable is less than the one below it, and continues swapping until
+				it can no longer do so.
+				-once it cannot, it will jump back to the iterator loop and set the nested loop's index variable to the iterator variable
+				and repeated the checks until the end
+		
+		Summary: this sorting function basically keeps a sorted sub-array at the begging of the array. With each new iteration,
+		it will make a check to see if the number is less than the previous number (highest number in sub-array); if it is,
+		the sort will keep making checks going backwards through the sub-array (highest to lowest) until it finds the correct
+		spot for the number. The "sorted" sub array will grow and the iterator will move to the next number not in the sub-array.
+		-iterator must start at 1 instead of zero, because first element is already "sorted" as per sub-array. if a number is lower,
+		the sort will place it in it's correct place later.
+		
+	DRIVER CLASS:
+	-menu driven main function which asks user if they'd like to load file or exit;
+		-if load file is selected, import csv full of integers and store them in array; tell user array has been loaded
+		-if exit selected, exit the first menu's while loop and say farewell to user
+		-else, if user doesn't enter correct entry, display menu again and ask user to double check entry.
+		
+	-if file loaded, go to next menu while loop; ask subject which sort they would like to use, or if they want to exit
+	-if Bubble/insertion sort selected, create new Bubble/Insertion Sort object on heap, and call the sortArray method.
+		-once sorted, print sorted array and go back to main menu (exit second while loop) to either reload the file, or exit
+		-if user selects exit, exit both while loops and say goodbye message
+		-if incorrect entry, display second menu and tell user to make sure they enter correct input
+	
+	-if making driver a class with main in it, just create Driver object after class description and call main.
+	
+
+THINGS TO INCLUDE: 
+	-COnstructors and Destructors for each class
+	-run Valgrind on program to check for mem leaks
+	-Header files for each class
+	-Big-O analysis on each sort method
+	
