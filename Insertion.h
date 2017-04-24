@@ -4,30 +4,30 @@ Assignment 6: Polymorphism
  C++ Header file
  David Haines */
  
-//--Header Guard--//
-#ifndef BUBBLE_H
-#define BUBBLE_H
+ //--Header Guard--//
+#ifndef INSERTION_H
+#define INSERTION_H
 
 //include virtual class Sort
 #include "Sort.h"
 
-//--Bubble Sort Class--//
+//--Insertion Sort Class--//
 
 //extension of sort
-class Bubble : public Sort
+class Insertion : public Sort
 {
 	//just overrides sortArray; needs no member variables
 	//needs constructor and Destructor
 	
 	public:
 		//--Default Constructor--//
-		Bubble();
+		Insertion();
 		
 		//--Virtual sortArray Function (overwritten)--//
 		virtual void sortArray(int []);
 		
 		//--Destructor--//
-		~Bubble();
+		~Insertion();
 		
 };
 //end header guard

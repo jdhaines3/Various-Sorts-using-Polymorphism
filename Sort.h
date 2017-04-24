@@ -15,6 +15,9 @@ class Sort
 	public:
 		virtual void sortArray() = 0;
 		
+	//add virtual destructor
+	~Sort();
+		
 };
 
 //end header guard
