@@ -8,13 +8,17 @@ Assignment 6: Polymorphism
 #ifndef DRIVER_H
 #define DRIVER_H
 
+#include <stdlib.h>
+#include <string>
+
 class Driver
 {
 	//declare class member variables and functions
 	public:
-		int numbers[];
+		int numbers[50];
 		int main();
 		void loadFile();
+		std::string arrayConcat();
 		
 		//--Constructor--//
 		Driver();
