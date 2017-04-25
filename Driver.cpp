@@ -197,3 +197,10 @@ Assignment 6: Polymorphism
 	return strArray
  }
  
+ void main()
+ {
+	Driver * runner = new Driver();
+	runner.main();
+	delete runner();
+	return 0;
+ }
