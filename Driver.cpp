@@ -68,7 +68,7 @@ Assignment 6: Polymorphism
 					Sort * insSort = new Insertion();
 					
 					//call the sort Array method//
-					insSort.sortArray(numbers[]);
+					insSort->sortArray(numbers[50]);
 					
 					//print sorted array
 					std::cout << "" << std::endl;
@@ -80,13 +80,13 @@ Assignment 6: Polymorphism
 					//back to main menuOne
 					menuTwo = 1;
 				}
-				else if (intputTwo == "2")
+				else if (inputTwo == "2")
 				{
 					//create Bubble object
 					Sort * bubSort = new Bubble();
 					
 					//call the sort Array method//
-					bubSort.sortArray(numbers[]);
+					bubSort->sortArray(numbers[50]);
 					
 					//print sorted array
 					std::cout << "" << std::endl;
@@ -139,8 +139,9 @@ Assignment 6: Polymorphism
 	std::string line = "";
 	std::stringstream ss(line);
 	
-	//create conversion stream
-	std::stringstream converter();
+	//create conversion stream and placeholder string
+	std::string convert = "";
+	std::stringstream converter(convert);
 	
 	//clear contents and get it ready to use
 	//might have to move to while loop
@@ -215,7 +216,7 @@ Assignment 6: Polymorphism
  int main()
  {
 	Driver * runner = new Driver();
-	runner.run();
+	runner->run();
 	delete runner();
 	return 0;
  }
