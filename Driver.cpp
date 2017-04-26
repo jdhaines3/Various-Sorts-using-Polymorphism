@@ -207,7 +207,7 @@ Assignment 6: Polymorphism
  int main()
  {
 	Driver * runner = new Driver();
-	runner.main();
+	runner.run();
 	delete runner();
 	return 0;
  }

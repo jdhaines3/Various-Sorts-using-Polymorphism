@@ -4,9 +4,12 @@
 #C++ Make File
 #David Haines
 
-SortArray.exe: Sort.o Bubble.o Insertion.o Driver.o
-	g++ Sort.o Bubble.o Insertion.o Driver.o -o SortArray.exe
+SortArray.exe: Driver.o Sort.o Bubble.o Insertion.o
+	g++ Driver.o Sort.o Bubble.o Insertion.o -o SortArray.exe
 
+Driver.o: Driver.cpp
+	g++ -c Driver.cpp
+	
 Sort.o: Sort.cpp
 	g++ -c Sort.cpp
 
@@ -15,9 +18,6 @@ Bubble.o: Bubble.cpp
 	
 Insertion.o: Insertion.cpp
 	g++ -c Insertion.cpp
-	
-Driver.o: Driver.cpp
-	g++ -c Driver.cpp
 
 clean:
 	rm -f *.o
