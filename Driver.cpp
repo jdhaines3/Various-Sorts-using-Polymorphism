@@ -15,15 +15,16 @@ Assignment 6: Polymorphism
  #include <sstream>
  #include <string>
  #include <stdlib.h>
+ #include <iostream>
  
  
- //--Driver Main Function--//
- int Driver::main()
+ ////----Driver Main Function----////
+ Driver::run()
  {
 	//exit loop variable
 	int menuOne = 0;
 	
-	//--First Menu--//
+	///---First Menu---///
 	while (menuOne == 0)
 	{
 		//print menu and ask user to enter which one they would like to do
@@ -104,6 +105,7 @@ Assignment 6: Polymorphism
 					std::cout << "I'm not sure what you were trying to do." << std::endl;
 					std::cout << "Please try entering 1, 2, or 3."  << std::endl;
 				}
+			}
 		}
 		else if (input == "2")
 		{
@@ -126,8 +128,11 @@ Assignment 6: Polymorphism
  //--Load File Function--//
  Driver::loadFile()
  {
-	//create string stream
-	std::stringstream ss();
+	 
+	//create string stream and string variable that inputfile extracts to
+	std::string line = "";
+	std::stringstream ss(line);
+	
 	//create conversion stream
 	std::stringstream converter();
 	
@@ -136,8 +141,9 @@ Assignment 6: Polymorphism
 	ss.clear();
 	ss.str("");
 	
-	//create string that holds number in csv file
+	//create string that holds individual number in csv file
 	std::string stringNumber = "";
+	
 	//create int that will be the converted string
 	int number = 0;
 	
@@ -177,13 +183,13 @@ Assignment 6: Polymorphism
  }
 
  
- //--Array String Concatenation For Printing--//
+ ////----Array String Concatenation For Printing----////
  Driver::arrayConcat()
  {
 	//variable for array string concat
 	std::string concatArray = "";
 		
-	for (i = 0, i < 50, i++)
+	for (i = 0; i < 50; i++)
 	{
 		//convert int at numbers[i] to a string, add it to the string of all array numbers with a comma and space after
 		std::string s = std::to_string (numbers[i]);
@@ -197,7 +203,8 @@ Assignment 6: Polymorphism
 	return strArray
  }
  
- void main()
+ //run program
+ int main()
  {
 	Driver * runner = new Driver();
 	runner.main();

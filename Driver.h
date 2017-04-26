@@ -16,7 +16,7 @@ class Driver
 	//declare class member variables and functions
 	public:
 		int numbers[50];
-		int main();
+		void run();
 		void loadFile();
 		std::string arrayConcat();
 		
