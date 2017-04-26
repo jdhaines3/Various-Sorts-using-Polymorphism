@@ -18,4 +18,4 @@ Insertion.o: Insertion.cpp
 
 clean:
 	rm -f *.o
-	rm SortArray
+	rm SortArray.exe

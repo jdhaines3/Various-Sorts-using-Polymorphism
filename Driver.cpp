@@ -139,9 +139,7 @@ Assignment 6: Polymorphism
 	std::string line = "";
 	std::stringstream ss(line);
 	
-	//create conversion stream and placeholder string
-	std::string convert = "";
-	std::stringstream converter(convert);
+	std::stringstream converter;
 	
 	//clear contents and get it ready to use
 	//might have to move to while loop
@@ -152,7 +150,7 @@ Assignment 6: Polymorphism
 	std::string stringNumber = "";
 	
 	//create int that will be the converted string
-	int number = 0;
+	int number;
 	
 	//get file and read in
 	std::ifstream inputFile("data.txt");
@@ -174,7 +172,7 @@ Assignment 6: Polymorphism
 			
 			//convert string to decimal/int
 			converter << stringNumber;
-			converter >> std::dec >> number;
+			converter >> number;
 			
 			numbers[i] = number;
 			i++;
