@@ -16,7 +16,7 @@ class Sort
 		virtual void sortArray(int []) = 0;
 		
 	//add virtual destructor
-	~Sort();
+	virtual ~Sort() {};
 		
 };
 
