@@ -68,7 +68,7 @@ Assignment 6: Polymorphism
 					Sort * insSort = new Insertion();
 					
 					//call the sort Array method//
-					insSort->sortArray(numbers[50]);
+					insSort->sortArray(numbers);
 					
 					//print sorted array
 					std::cout << "" << std::endl;
@@ -86,7 +86,7 @@ Assignment 6: Polymorphism
 					Sort * bubSort = new Bubble();
 					
 					//call the sort Array method//
-					bubSort->sortArray(numbers[50]);
+					bubSort->sortArray(numbers);
 					
 					//print sorted array
 					std::cout << "" << std::endl;
@@ -160,6 +160,9 @@ Assignment 6: Polymorphism
 	//see if it is open; if so, read in numbers and place in array
 	if (inputFile.is_open())
 	{
+		//declare index variable
+		int i = 0;
+		
 		while (std::getline(inputFile, line))
 		{
 			//get line from file and specify comma delimiter
@@ -201,7 +204,7 @@ Assignment 6: Polymorphism
 	for (index; index < 50; index++)
 	{
 		//convert int at numbers[i] to a string, add it to the string of all array numbers with a comma and space after
-		std::string s = std::to_string (numbers[i]);
+		std::string s = std::to_string (numbers[index]);
 		concatArray = concatArray + s + ", ";
 	}
 		
@@ -209,7 +212,7 @@ Assignment 6: Polymorphism
 	std::string strArray = concatArray.substr(0, strArray.length() - 2);
 
 	//return string with all array elements concatenated, without last space and comma
-	return strArray
+	return strArray;
  }
  
  //run program
@@ -217,6 +220,6 @@ Assignment 6: Polymorphism
  {
 	Driver * runner = new Driver();
 	runner->run();
-	delete runner();
+	delete runner;
 	return 0;
  }
