@@ -19,7 +19,7 @@ Assignment 6: Polymorphism
  
  
  ////----Driver Main Function----////
- Driver::run()
+ void Driver::run()
  {
 	//exit loop variable
 	int menuOne = 0;
@@ -126,7 +126,7 @@ Assignment 6: Polymorphism
  
  
  //--Load File Function--//
- Driver::loadFile()
+ void Driver::loadFile()
  {
 	 
 	//create string stream and string variable that inputfile extracts to
@@ -184,7 +184,7 @@ Assignment 6: Polymorphism
 
  
  ////----Array String Concatenation For Printing----////
- Driver::arrayConcat()
+ std::string Driver::arrayConcat()
  {
 	//variable for array string concat
 	std::string concatArray = "";

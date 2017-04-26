@@ -6,7 +6,7 @@ Assignment 6: Polymorphism
  
  
  ///---Insertion Sort Virtual Function---///
-Insertion::sortArray(int numb[])
+void Insertion::sortArray(int numb[])
 {
 	//needs variables for index, swap counter, and temp variable
 	int index = 1;

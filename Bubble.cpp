@@ -6,7 +6,7 @@ Assignment 6: Polymorphism
  
  
  ///---Bubble Sort Virtual Function---///
- Bubble::sortArray(int numb[])
+ void Bubble::sortArray(int numb[])
  {
 	//declare index variable
 	int index = 0;
