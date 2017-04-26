@@ -4,6 +4,7 @@ Assignment 6: Polymorphism
  C++ Insertion Sort CPP
  David Haines */
  
+ #include "Insertion.h"
  
  ///---Insertion Sort Virtual Function---///
 void Insertion::sortArray(int numb[])

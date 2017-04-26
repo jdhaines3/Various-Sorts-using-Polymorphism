@@ -4,6 +4,7 @@ Assignment 6: Polymorphism
  C++ Bubble CPP
  David Haines */
  
+ #include "Bubble.h"
  
  ///---Bubble Sort Virtual Function---///
  void Bubble::sortArray(int numb[])
@@ -22,7 +23,7 @@ Assignment 6: Polymorphism
 		
 		/*but must include second for loop to go through the rest of the numbers left behind
 		this loop will leave off last "bubbled" element and sort the highest number to the end then repeat*/
-		for (j; j < n - i - 1; j++)
+		for (j; j < n - index - 1; j++)
 		{
 			
 			//determine if current index is larger than next index
