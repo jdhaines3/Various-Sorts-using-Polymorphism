@@ -13,7 +13,7 @@ class Sort
 {
 	//must be public and pure virtual : set function to zero
 	public:
-		virtual void sortArray() = 0;
+		virtual void sortArray(int []) = 0;
 		
 	//add virtual destructor
 	~Sort();

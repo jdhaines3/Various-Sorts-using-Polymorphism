@@ -27,6 +27,9 @@ Assignment 6: Polymorphism
 	///---First Menu---///
 	while (menuOne == 0)
 	{
+		//input variable declaration
+		std::string input = "";
+		
 		//print menu and ask user to enter which one they would like to do
 		std::cout << "" << std::endl;
 		std::cout << "1) Load Data (From File)" << std::endl;
@@ -47,6 +50,9 @@ Assignment 6: Polymorphism
 			//--Second Menu--//
 			while (menuTwo == 0)
 			{
+				//second menu input variable declaration
+				std::string inputTwo = "";
+				
 				//print menu and ask user to enter which one they would like to do
 				std::cout << "" << std::endl;
 				std::cout << "1) Insertion Sort" << std::endl;
@@ -186,10 +192,12 @@ Assignment 6: Polymorphism
  ////----Array String Concatenation For Printing----////
  std::string Driver::arrayConcat()
  {
+	//variable for index
+	int index = 0;
 	//variable for array string concat
 	std::string concatArray = "";
 		
-	for (i = 0; i < 50; i++)
+	for (index; index < 50; index++)
 	{
 		//convert int at numbers[i] to a string, add it to the string of all array numbers with a comma and space after
 		std::string s = std::to_string (numbers[i]);
