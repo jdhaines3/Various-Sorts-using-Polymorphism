@@ -200,11 +200,25 @@ Assignment 6: Polymorphism
 	int index = 0;
 	//variable for array string concat
 	std::string concatArray = "";
-		
+	
+	//create stringstream to input number at array index then convert to str
+	std::stringstream arrayNum;
+	
+	//convert int at numbers[i] to a string, add it to the string of all array numbers with a comma and space after
 	for (index; index < 50; index++)
 	{
-		//convert int at numbers[i] to a string, add it to the string of all array numbers with a comma and space after
-		std::string s = std::to_string (numbers[index]);
+		//clear stringstream
+		arrayNum.clear();
+		arrayNum.str("");
+		
+		//take in the number at index
+		arrayNum << numbers[index];
+		
+		//set string to arrayNum 
+		std::string s = arrayNum.str();
+		
+		/*std::string s = std::to_string (numbers[index]);
+		DOESN'T WORK WITH THIS COMPILER*/
 		concatArray = concatArray + s + ", ";
 	}
 		
