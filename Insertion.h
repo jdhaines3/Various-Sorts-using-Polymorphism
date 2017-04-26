@@ -21,13 +21,13 @@ class Insertion : public Sort
 	
 	public:
 		//--Default Constructor--//
-		Insertion();
+		Insertion() {};
 		
 		//--Virtual sortArray Function (overwritten)--//
 		virtual void sortArray(int []);
 		
 		//--Destructor--//
-		~Insertion();
+		~Insertion() {};
 		
 };
 //end header guard

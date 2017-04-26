@@ -21,13 +21,13 @@ class Bubble : public Sort
 	
 	public:
 		//--Default Constructor--//
-		Bubble();
+		Bubble() {};
 		
 		//--Virtual sortArray Function (overwritten)--//
 		virtual void sortArray(int []);
 		
 		//--Destructor--//
-		~Bubble();
+		~Bubble() {};
 		
 };
 //end header guard
