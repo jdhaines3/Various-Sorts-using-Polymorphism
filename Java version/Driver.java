@@ -2,7 +2,7 @@
 *Honor Pledge: I pledge that I have neither 
 *given nor receieved any help on this assignment.
 *Assignment 6: Polymorphism
-*Insertion Sort Class
+*Driver Class
 *David Haines 
 */
 
@@ -20,7 +20,7 @@ import java.util.Scanner;
 public class Driver
 {
 	//declare numbers array as private static
-	public static int numbers[50];
+	public static int[] numbers = new int[50];
 	
 	
 	///---Main---///
@@ -186,14 +186,12 @@ public class Driver
 	////----Array String Concatenation For Printing----////
 	public static String arrayConcat()
 	{
-		//variable for index
-		int index = 0;
 	
 		//variable for array string concat
 		String concatArray = "";
 	
 		//convert int at numbers[i] to a string, add it to the string of all array numbers with a comma and space after
-		for (index; index < 50; index++)
+		for (int index = 0; index < 50; index++)
 		{
 			int i = numbers[index];
 		
