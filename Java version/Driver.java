@@ -68,7 +68,7 @@ public class Driver
 					String inp = inputTwo.next();
 				
 					//determine which option user selected, or if entry was invalid; do said option
-					if (inputTwo.equals("1"))
+					if (inp.equals("1"))
 					{
 						//create Insertion object
 						Sort insSort = new Insertion();
@@ -82,7 +82,7 @@ public class Driver
 						//back to main menuOne
 						menuTwo = 1;
 					}
-					else if (inputTwo.equals("2"))
+					else if (inp.equals("2"))
 					{
 						//create Bubble object
 						Sort bubSort = new Bubble();
@@ -96,7 +96,7 @@ public class Driver
 						//back to first menu
 						menuTwo = 1;
 					}
-					else if (inputTwo.equals("3"))
+					else if (inp.equals("3"))
 					{
 						//exit both menus/program
 						menuOne = 1;
