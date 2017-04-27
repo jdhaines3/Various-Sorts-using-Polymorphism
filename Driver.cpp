@@ -182,7 +182,7 @@ Assignment 6: Polymorphism
 				converter.str("");
 			
 				//convert string to decimal/int: take in the string variable for each csv field, put out into int variable
-				converter << stringNumber;
+				converter << strInt;
 				converter >> number;
 				
 				//set the output number to array element with index i and increment i
