@@ -1,8 +1,10 @@
-/* Honor Pledge: I pledge that I have neither 
- given nor receieved any help on this assignment.
-Assignment 6: Polymorphism
- C++ Header file
- David Haines */
+/* 
+*Honor Pledge: I pledge that I have neither 
+*given nor receieved any help on this assignment.
+*Assignment 6: Polymorphism
+*Pure Virtual Sort Class Header File
+*David Haines 
+*/
  
 //--Header Guard--//
 #ifndef SORT_H

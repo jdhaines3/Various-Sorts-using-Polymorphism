@@ -1,8 +1,10 @@
-/* Honor Pledge: I pledge that I have neither 
- given nor receieved any help on this assignment.
-Assignment 6: Polymorphism
- C++ Insertion Sort CPP
- David Haines */
+/* 
+*Honor Pledge: I pledge that I have neither 
+*given nor receieved any help on this assignment.
+*Assignment 6: Polymorphism
+*Insertion Sort CPP File
+*David Haines 
+*/
  
  #include "Insertion.h"
  

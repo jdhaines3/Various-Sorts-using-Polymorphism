@@ -1,8 +1,10 @@
-/* Honor Pledge: I pledge that I have neither 
- given nor receieved any help on this assignment.
-Assignment 6: Polymorphism
- C++ Header file
- David Haines */
+/* 
+*Honor Pledge: I pledge that I have neither 
+*given nor receieved any help on this assignment.
+*Assignment 6: Polymorphism
+*Driver (and main) CPP file 
+*David Haines 
+*/
  
  //imports/includes for classes
  #include "Driver.h"
@@ -34,6 +36,7 @@ Assignment 6: Polymorphism
 		std::cout << "" << std::endl;
 		std::cout << "1) Load Data (From File)" << std::endl;
 		std::cout << "2) Exit Program" << std::endl;
+		std::cout << "" << std::endl;
 		std::cout << "Please Enter Your Selection: " << std::endl;
 		std::cin >> input;
 		
@@ -58,6 +61,7 @@ Assignment 6: Polymorphism
 				std::cout << "1) Insertion Sort" << std::endl;
 				std::cout << "2) Bubble Sort" << std::endl;
 				std::cout << "3) Exit Program" << std::endl;
+				std::cout << "" << std::endl;
 				std::cout << "Please Enter Your Selection: " << std::endl;
 				std::cin >> inputTwo;
 				
@@ -124,10 +128,13 @@ Assignment 6: Polymorphism
 			std::cout << "I'm not sure what you were trying to do." << std::endl;
 			std::cout << "Please try entering 1 or 2."  << std::endl;
 		}
-		
-		//exit message
-		std::cout << "Ok, exiting now. Goodbye!" << std::endl;
 	}
+	
+	//exit message
+	std::cout << "" << std::endl;
+	std::cout << "Ok, exiting now. Goodbye!" << std::endl;
+	std::cout << "" << std::endl;
+	
 	
 	return;
  }
@@ -197,6 +204,7 @@ Assignment 6: Polymorphism
 		//print array with array concatenation function	
 		std::cout << "" << std::endl;
 		std::cout << "File imported." << std::endl;
+		std::cout << "" << std::endl;
 		std::cout << "Unsorted Array: " << arrayConcat() << std::endl;
 		
 	}
@@ -245,7 +253,7 @@ Assignment 6: Polymorphism
 	}
 
 	//erase last comma and space in strArray
-	std::string strArray = concatArray.substr(0, strArray.length() - 2);
+	std::string strArray = concatArray.substr(0, concatArray.length() - 2);
 
 	//return string with all array elements concatenated, without last space and comma
 	return strArray;

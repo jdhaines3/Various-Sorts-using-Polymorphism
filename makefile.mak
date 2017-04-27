@@ -1,7 +1,7 @@
 #Honor Pledge: I pledge that I have neither 
 #given nor receieved any help on this assignment.
 #Assignment 6: Polymorphism
-#C++ Make File
+#C++ Make File for Sorting Program
 #David Haines
 
 SortArray.exe: Driver.o Bubble.o Insertion.o

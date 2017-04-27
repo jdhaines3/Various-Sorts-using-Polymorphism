@@ -1,8 +1,10 @@
-/* Honor Pledge: I pledge that I have neither 
- given nor receieved any help on this assignment.
-Assignment 6: Polymorphism
- C++ Bubble CPP
- David Haines */
+/* 
+*Honor Pledge: I pledge that I have neither 
+*given nor receieved any help on this assignment.
+*Assignment 6: Polymorphism
+*Bubble Sort CPP File
+*David Haines
+*/
  
  #include "Bubble.h"
  
@@ -13,13 +15,14 @@ Assignment 6: Polymorphism
 	int index = 0;
 	//declare temp variable for swapping
 	int temp;
-	//declare second loop index variable
-	int j = 0;
+	
 	
 	
 	//for loop to go through each element in array and move the highest number up; iterator loop
 	for (index; index < 50; index++)
 	{
+		//declare second loop index variable
+		int j = 0;
 		
 		/*
 		*but must include second for loop to go through the rest of the numbers left behind
