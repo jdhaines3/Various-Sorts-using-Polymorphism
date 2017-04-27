@@ -1,0 +1,15 @@
+==187214== Memcheck, a memory error detector
+==187214== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==187214== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==187214== Command: ./SortArray.exe
+==187214== Parent PID: 157966
+==187214== 
+==187214== 
+==187214== HEAP SUMMARY:
+==187214==     in use at exit: 0 bytes in 0 blocks
+==187214==   total heap usage: 790 allocs, 790 frees, 126,529 bytes allocated
+==187214== 
+==187214== All heap blocks were freed -- no leaks are possible
+==187214== 
+==187214== For counts of detected and suppressed errors, rerun with: -v
+==187214== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
