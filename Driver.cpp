@@ -47,7 +47,7 @@ Assignment 6: Polymorphism
 			//exit loop variable for second menu
 			int menuTwo = 0;
 			
-			//--Second Menu--//
+			///---Second Menu---///
 			while (menuTwo == 0)
 			{
 				//second menu input variable declaration
@@ -128,57 +128,73 @@ Assignment 6: Polymorphism
 		//exit message
 		std::cout << "Ok, exiting now. Goodbye!" << std::endl;
 	}
+	
+	return;
  }
  
  
- //--Load File Function--//
+ ///---Load File Function---///
  void Driver::loadFile()
- {
-	 
-	//create string stream and string variable that inputfile extracts to
-	std::string line = "";
-	std::stringstream ss(line);
+ {	
+	//Extracted line variable
+	std::string line;
+	//create int that will be the converted input string
+	int number;
+	//create string that holds individual number in csv file
+	std::string strInt = "";
 	
+	//Stringstream instance for reading in and delimiting
+	std::stringstream ss;
+	//Stringstream instance for converting
 	std::stringstream converter;
 	
-	//clear contents and get it ready to use
-	//might have to move to while loop
-	ss.clear();
-	ss.str("");
-	
-	//create string that holds individual number in csv file
-	std::string stringNumber = "";
-	
-	//create int that will be the converted string
-	int number;
-	
-	//get file and read in
+	//Input Stream Variable (opens file, too)
 	std::ifstream inputFile("data.txt");
+	
 	
 	//see if it is open; if so, read in numbers and place in array
 	if (inputFile.is_open())
-	{
-		//declare index variable
-		int i = 0;
+	{		
 		
+		//--while loop to get each line--//
 		while (std::getline(inputFile, line))
 		{
-			//get line from file and specify comma delimiter
-			std::getline(ss, stringNumber, ',');
+			//clear ss object and ready it for use
+			ss.clear();
+			ss.str("");
 			
-			//clear converter
-			converter.clear();
-			converter.str("");
+			//set ss object to take in current line
+			ss.str(line);
 			
-			//convert string to decimal/int
-			converter << stringNumber;
-			converter >> number;
+			//declare numbers array index variable
+			int i = 0;
 			
-			numbers[i] = number;
-			i++;
+			//--second while loop to parse through comma delimited values--//
+			/*
+			*Takes in ss value (read-in line), sepearates field based on commas in line,
+			*loops through all fields, sets strInt to field value, convert and put in array,
+			*then moves to next field
+			*/
+			while (std::getline(ss, strInt, ','))
+			{
+				//clear converter from last field value
+				converter.clear();
+				converter.str("");
+			
+				//convert string to decimal/int: take in the string variable for each csv field, put out into int variable
+				converter << stringNumber;
+				converter >> number;
+				
+				//set the output number to array element with index i and increment i
+				numbers[i] = number;
+				i++;
+			}
 		}
 		
-		//print array	
+		//close the input stream
+		inputFile.close();
+		
+		//print array with array concatenation function	
 		std::cout << "" << std::endl;
 		std::cout << "File imported." << std::endl;
 		std::cout << "Unsorted Array: " << arrayConcat() << std::endl;
@@ -186,8 +202,11 @@ Assignment 6: Polymorphism
 	}
 	else
 	{
+		//if file can't be opened, print message to user.
 		std::cout << "Unable to open file" << std::endl;
 	}
+	
+	return;
  }
 
  
@@ -196,6 +215,7 @@ Assignment 6: Polymorphism
  {
 	//variable for index
 	int index = 0;
+	
 	//variable for array string concat
 	std::string concatArray = "";
 	
@@ -215,11 +235,15 @@ Assignment 6: Polymorphism
 		//set string to arrayNum 
 		std::string s = arrayNum.str();
 		
-		/*std::string s = std::to_string (numbers[index]);
-		DOESN'T WORK WITH THIS COMPILER*/
+		/*
+		*std::string s = std::to_string (numbers[index]);
+		*DOESN'T WORK WITH THIS COMPILER
+		*/
+		
+		//add the array element to the string with a comma and space divider
 		concatArray = concatArray + s + ", ";
 	}
-		
+
 	//erase last comma and space in strArray
 	std::string strArray = concatArray.substr(0, strArray.length() - 2);
 
@@ -227,11 +251,14 @@ Assignment 6: Polymorphism
 	return strArray;
  }
  
- //run program
+ ////----MAIN Program----////
  int main()
  {
-	Driver * runner = new Driver();
-	runner->run();
-	delete runner;
+	//create new instance of driver and call the main (run) function
+	Driver * drive = new Driver();
+	drive->run();
+	
+	//delete drive when done and return 0
+	delete drive;
 	return 0;
  }

@@ -19,19 +19,24 @@ void Insertion::sortArray(int numb[])
 	{
 		j = index;
 		
-		/*j will check to see if element at current index bigger than last, if it is, swap and decrement j
-		it will continue checking the previous element swapping until j gets to 1 OR the previous element
-		is greater than the one at index j */
+		/*
+		*j will check to see if element at current index bigger than last, if it is, swap and decrement j
+		*it will continue checking the previous element swapping until j gets to 1 OR the previous element
+		*is greater than the one at index j 
+		*/
 		while( j >= 1 && numb[j - 1] > numb[j] )
 		{
 			//perform swap: see notes in Bubble.cpp
 			temp = numb[j];
 			numb[j] = numb[j - 1];
 			numb[j - 1] = temp;
+			
 			//decrement j to check if previous number in sorted sub-array is less
 			j = j - 1;
 		}
 	}
+	
+	return;
  }
  
  //long notes on swap algorithms to remind myself what each looping mechanism does

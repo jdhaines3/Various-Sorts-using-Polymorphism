@@ -21,8 +21,10 @@ Assignment 6: Polymorphism
 	for (index; index < 50; index++)
 	{
 		
-		/*but must include second for loop to go through the rest of the numbers left behind
-		this loop will leave off last "bubbled" element and sort the highest number to the end then repeat*/
+		/*
+		*but must include second for loop to go through the rest of the numbers left behind
+		*this loop will leave off last "bubbled" element and sort the highest number to the end then repeat
+		*/
 		for (j; j < 49 - index; j++)
 		{
 			
@@ -38,4 +40,8 @@ Assignment 6: Polymorphism
 			}
 		}
 	}
+	
+	return;
  }
+ 
+ //long notes on swap algorithms to remind myself what each looping mechanism does
