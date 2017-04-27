@@ -8,9 +8,9 @@
 
 
 ///---Abstract Sort Class---///
-public class Sort
+public abstract class Sort
 {
 	//all public instance methods are virtual in java
-	public void sortArray(int numb[]);
+	abstract void sortArray(int numb[]);
 		
 }

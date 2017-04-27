@@ -18,25 +18,20 @@ public class Bubble extends Sort
 	//automatic overriding of Sort class's sortArray function
 	public void sortArray(int numb[])
 	{
-		//declare index variable
-		int index = 0;
 		//declare temp variable for swapping
 		int temp;
 	
 	
 	
 		//for loop to go through each element in array and move the highest number up; iterator loop
-		for (index; index < 50; index++)
+		for (int index = 0; index < 50; index++)
 		{
-			//declare second loop index variable
-			int j = 0;
-		
 			/*
-			*but must include second for loop to go through the rest of the numbers left behind
+			* must include second for loop to go through the rest of the numbers left behind
 			*this loop will leave off last "bubbled" element and sort the highest number to the end then repeat
 			*/
 			
-			for (j; j < 49 - index; j++)
+			for (int j = 0; j < 49 - index; j++)
 			{
 			
 				//determine if current index is larger than next index

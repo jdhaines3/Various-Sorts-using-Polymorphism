@@ -19,12 +19,11 @@ public class Insertion extends Sort
 	public void sortArray(int numb[])
 	{
 		//needs variables for index, swap counter, and temp variable
-		int index = 1;
 		int j;
 		int temp;
 	
 		//index starts at one because first element is already "sorted"; j is set to index whenever index incremented
-		for (index; index < 50; index++)
+		for (int index = 1; index < 50; index++)
 		{
 			j = index;
 		
