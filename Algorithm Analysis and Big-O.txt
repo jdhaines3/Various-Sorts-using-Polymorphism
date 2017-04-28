@@ -1,0 +1,30 @@
+David Haines
+Big-O Analysis of Bubble Sort and Insertion Sort
+Comparison between C++ and Java versions
+Assignment 6 + BlackBelt
+
+
+To begin the analysis, let's look at the base space complexity of each sort.  Bubble Sort requires two integer index variables and a temp variable,
+as well as the array, which is set at a constant 50 in this program, but could be variable easily. Insertion Sort requires the same.  So in both cases,
+a space complexity of the sort algorithms is S(P) = 2 + S(2).  The two constants in our program are the constant allocation of the array of 50 integers, and
+the temp variables which will only hold one int at a time. The two variable int's are the integer ints. 
+
+
+Now, lets look at time complexity.  Best case for both sorts is that the array is already sorted.  Worst case for either is that the array is in reverse order.
+For Insertion sort, the first and second lines execute once, then starts the for loop which will execute n/n-1 times. A variable assignment next will happen n-1 times 
+as well, due to the number of the first for loops iterations.  Then we get to a while loop, which will proceed a different amount of time based on amount content of array and 
+how well the array is sorted. We will set this to Tj or number of shifts the j loop control variable do.  Bear in mind that everything in the while loop is already in the for loop,
+so it is automatically done n-1 times Tj.  Everything within that while loop will be Tj or Tj-1.  Best case scenario (sorted loop), Tj will equal 1, so the Time constant would be
+xn - b, or linear. Worst case scenario, we set Tj equal to j/n which will yield us a total quadratic equation: xn^2 + xn - b.  In the best case, doubling our load just doubles our time.
+Worst case, doubling our input takes time squared. If simplified to big O notation, our Asymptotic Upper Bound would be O(n) and lower bound would be (On^2), since we take the base highest n term.
+This has the most effect on the function, while ignoring lower coefficients and constants. 
+
+Our Bubble Sort, while similar, runs a finite amount of times.  Both for loops will run, but the second will only do anything if numb[j] > numb[j+1].
+In this regard, the first for loop will run n times, while the second for loop may run a max of n-j times or won't run at all (best case).  Similarly to the Insertion sort, if Bubble Sort
+has an already sorted array, it will run through atleast xn times. If unsorted, it will run through n(n-1) times, or xn^2 + xn times.  Like before, the upper bounds of the sort will be
+O(n^2), while the lower bounds will be at least O(n), as it must run through the first for loop n times. So, as we can see, both sorts' best and worst cases take approximately the same amount
+of time.  On average, both will be about O(n^2) as well, because they will generally have to run through the second looping mechanism at least a few times.
+
+As for time and space complexity, both algorithms are about the same. If writing in another language, in this case C++ and Java, you can see no change in the lower and upper bounds.
+This is because while the language may have changed and introduced external factors into the timing, external factors don't get taken into consideration for time and space complexity.
+Also, even though the language changed, the algorithm is still the same, regardless of language. If the algorithm doesn't change, the big-O notation and time analysis won't change.
